@@ -1,6 +1,6 @@
 # Provider - AWS 
 provider "aws" {
-  region = "${var.aws_region}"
+  region = var.aws_region
 }
 
 # Backend - S3
@@ -12,20 +12,11 @@ terraform {
 }
 
 # Module to provision VPC
-module "vpc" {
-  source = "./vpc"
+module "s3" {
+  source = "./s3"
 
-  admin_cidr_ingress        = "${var.admin_cidr_ingress}"
-  vpc_cidr_block            = "${var.vpc_cidr_block}"
-  public_subnet_cidr_block  = "${var.public_subnet_cidr_block}"
-  private_subnet_cidr_block = "${var.private_subnet_cidr_block}"
-  deployment_stage          = "${var.deployment_stage}"
-  account_no                = "${var.account_no}"
-  region                    = "${var.region}"
-  avail_zone                = "${var.avail_zone}"
-  client                    = "${var.client}"
-  product                   = "${var.product}"
-  projectcode               = "${var.projectcode}"
-  environment               = "${var.environment}"
-  owner                     = "${var.owner}"
+  bucket_name      = var.bucket_name
+  # policy_json      = var.policy_json
+  aws_region       = var.aws_region
+  deployment_stage = var.deployment_stage
 }

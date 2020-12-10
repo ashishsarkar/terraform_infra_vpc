@@ -8,40 +8,42 @@ variable "bucket_name" {
   default     = "web-hosting-bucket-name"
 }
 
-# variable "policy_json" {
-#   description = "Policy for JSON"
-# }
 
 variable "deployment_stage" {
   description = "select your deployment_stage"
-  default     = "dev"
+  default = "dev"
 }
 
 
 
 
 
+# variable "availability_zone_count" {
+#   description = "The number of availability zones to be leveraged within the VPC"
+#   default     = "2"
+# }
 
+
+# variable "az_count" {
+#   description = "Number of AZs to cover in a given region"
+#   default     = "2"
+# }
+
+
+# variable "private_subnet_cidr_block" {
+#   description = "The CIDR block for the private subnet within the VPC"
+# }
+
+# variable "vpc_cidr_block" {
+#   description = "The CIDR block for the VPC"
+# }
 
 # variable "public_subnet_cidr_block" {
 #   description = "The CIDR block for the public subnet within the VPC"
 # }
 
 # variable "admin_cidr_ingress" {
-#   description = "Ingress for CIDR"
-#   default     = "0.0.0.0/0"
-# }
-
-# variable "vpc_cidr_block" {
-#   description = "The CIDR block for the VPC to use"
-# }
-
-# variable "public_subnet_cidr_block" {
-#   description = "The CIDR block for the public subnet within the VPC"
-# }
-
-# variable "private_subnet_cidr_block" {
-#   description = "The CIDR block for the private subnet within the VPC"
+#     description = "The CIDR block for the public subnet within the VPC"
 # }
 
 # variable "account_no" {
@@ -71,7 +73,6 @@ variable "deployment_stage" {
 # variable "projectcode" {
 #   description = "AWS Onsurity Account'sn client Project code on which resources to be provisioned"
 # }
-
 
 # variable "environment" {
 #   description = "AWS Onsurity Account's environment name on which resources to be provisioned"
