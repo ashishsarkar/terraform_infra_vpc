@@ -1,7 +1,7 @@
    
 #!/bin/bash
 
-terraform init -backend-config=environments/dev/backend.config
-terraform plan -var-file=environments/dev/variables.tfvars  
-terraform apply -var-file=environments/dev/variables.tfvars  --auto-approve=true
-# terraform destroy -var-file=environments/dev/variables.tfvars  --auto-approve=true
+terraform init -backend-config=environments/vpn/backend.config
+terraform plan -var-file=environments/vpn/variables.tfvars  
+terraform apply -var-file=environments/vpn/variables.tfvars  --auto-approve=true
+# terraform destroy -var-file=environments/vpn/variables.tfvars  --auto-approve=true
